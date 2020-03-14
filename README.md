@@ -1,4 +1,6 @@
-A wrapper library for Dart developers.
+A generated Dart API for [auth0-spa-js](https://github.com/auth0/auth0-spa-js)
+using [pkg/js](https://pub.dartlang.org/packages/js) and
+[dart_js_facade_gen](https://github.com/dart-lang/js_facade_gen).
 
 Created from templates made available by Stagehand under a BSD-style
 [license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
