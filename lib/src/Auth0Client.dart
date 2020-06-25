@@ -6,6 +6,7 @@ import "package:js/js_util.dart" show promiseToFuture;
 
 import 'global.dart';
 
+
 /// Auth0 SDK for Single Page Applications using [Authorization Code Grant Flow with PKCE](https://auth0.com/docs/api-auth/tutorials/authorization-code-grant-pkce).
 @JS()
 class Auth0Client {
@@ -120,4 +121,23 @@ abstract class Promise<T> {
   external factory Promise(
       void executor(void resolve(T result), Function reject));
   external Promise then(void onFulfilled(T result), [Function onRejected]);
+}
+
+@JS('createAuth0Client')
+external Promise<String> _createAuth0Client([CreateAuth0ClientOptions options]);
+
+@JS('createAuth0Client')
+Future<Auth0Client> createAuth0Client([CreateAuth0ClientOptions options]) {
+  return promiseToFuture(_createAuth0Client(options));
+}
+
+@JS()
+@anonymous
+class CreateAuth0ClientOptions {
+  external String get domain;
+  external String get client_id;
+  external String get redirect_uri;
+
+  external factory CreateAuth0ClientOptions(
+      {String domain, String client_id, String redirect_uri});
 }
