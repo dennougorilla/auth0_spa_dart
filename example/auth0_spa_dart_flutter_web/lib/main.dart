@@ -70,8 +70,8 @@ class MyApp extends StatelessWidget {
   final domain = '';
   final redirectUrl = 'http://localhost:52692/callback';
   Options options = Options()
-    ..domain = 'dev-designium-gaga.auth0.com'
-    ..client_id = '5TTO9sv0ozxagKsTrs0u9t77SbyTVoan'
+    ..domain = ''
+    ..client_id = ''
     ..redirect_uri = 'http://localhost:52692/callback';
   Auth0Client auth0;
 
